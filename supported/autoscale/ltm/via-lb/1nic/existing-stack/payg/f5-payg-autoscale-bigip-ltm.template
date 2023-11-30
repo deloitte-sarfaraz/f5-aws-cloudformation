@@ -591,7 +591,6 @@
       "default": "INSTANCE CONFIGURATION"
      },
      "Parameters": [
-      "sshKey",
       "instanceType",
       "throughput",
       "imageName",
@@ -753,9 +752,6 @@
     },
     "scalingMinSize": {
      "default": "Minimum Instances"
-    },
-    "sshKey": {
-     "default": "SSH Key Name"
     },
     "subnets": {
      "default": "Subnet ID(s)"
@@ -1040,10 +1036,6 @@
    "MaxValue": 8,
    "MinValue": 1,
    "Type": "Number"
-  },
-  "sshKey": {
-   "Description": "EC2 KeyPair to enable SSH access to the BIG-IP instance",
-   "Type": "AWS::EC2::KeyPair::KeyName"
   },
   "subnets": {
    "ConstraintDescription": "The subnet IDs must be within an existing VPC",
@@ -2099,9 +2091,6 @@
     "InstanceMonitoring": false,
     "InstanceType": {
      "Ref": "instanceType"
-    },
-    "KeyName": {
-     "Ref": "sshKey"
     },
     "SecurityGroups": [
      {
